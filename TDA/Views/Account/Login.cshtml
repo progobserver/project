@@ -1,0 +1,68 @@
+﻿@model TDA.Models.LoginModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <style>
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        .button {
+            background-color: #3daed4;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .validation-summary-errors {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .field-validation-error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <h2>Вход на сайт</h2>
+
+    <form asp-action="Login" asp-controller="Account" method="post">
+        @Html.AntiForgeryToken()
+        <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
+        <div class="form-group" style="margin-top:10px;">
+            <label asp-for="Login">Введите логин</label>
+            <input asp-for="Login" class="form-control" />
+            <span asp-validation-for="Login" class="field-validation-error"></span>
+        </div>
+        <div class="form-group" style="margin-top:10px;">
+            <label asp-for="Password">Введите пароль</label>
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="field-validation-error"></span>
+        </div>
+        <div style="margin-top:10px; text-align:center;">
+            <input type="submit" value="Войти" class="button" />
+        </div>
+        <div style="margin-top:10px; text-align:center;">
+            <a asp-action="Register" asp-controller="Account">Регистрация</a>
+        </div>
+    </form>
+</body>
+</html>

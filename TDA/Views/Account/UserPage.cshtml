@@ -1,0 +1,93 @@
+﻿@model TDA.Models.User
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title>Профиль пользователя</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        h3 {
+            margin-top: 40px;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .profile-table {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 30px auto;           
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: lightskyblue;
+            padding: 10px;
+            text-align: left;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        
+
+        p {
+            max-width: 800px;
+            margin: 10px auto;
+            font-size: 16px;
+            text-align: center;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <h2>Ваш профиль</h2>
+    @if (User.IsInRole("admin"))
+    {
+        <p><a href="/Account/ViewUser">Список пользователей</a></p>
+    }
+    <div class="profile-table">
+        <table>
+            <tr>
+                <th>Имя пользователя</th>
+                <td>@Model.username</td>
+                <a asp-action="ProfileEdit" asp-controller="Account" asp-route-id="@Model.UserId" style="margin-right:10px; font-size:14px;  color:blue;">Изменить</a>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>@Model.email</td>
+            </tr>
+            <tr>
+                <th>Дата создания</th>
+                <td>@Model.created_at.ToString("dd.MM.yyyy")</td>
+            </tr>
+            <tr>
+                <th>Роль</th>
+                <td>@(Model.Role.role_name)</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

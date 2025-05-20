@@ -1,0 +1,76 @@
+﻿@model TDA.Models.User
+@{
+    ViewData["Title"] = "BlockUser";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: forestgreen;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        dl {
+            display: inline-block;
+            text-align: left;
+        }
+
+        dt {
+            font-weight: bold;
+        }
+
+        dd {
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Подтвердите разблокировку пользователя</h2>
+    <form asp-controller="Account" asp-action="UnlockUser" method="post">
+        <div class="form-group">
+            <dl class="dl-horizontal">
+                <dt>Пользователь</dt>
+                <dd>@Html.DisplayFor(model => model.username)</dd>
+            </dl>
+
+            @Html.AntiForgeryToken()
+            <input type="submit" class="button" value="Разблокировать" />
+
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿@model TDA.Models.User
+@{
+    ViewData["Title"] = "DeleteUser";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<html>
+<head>
+    <style>
+
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: red;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        dl {
+            display: inline-block;
+            text-align: left;
+        }
+
+        dt {
+            font-weight: bold;
+        }
+
+        dd {
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Подтвердите удаление пользователя</h2>
+    <h3>Это действие нельзя отменить!</h3>
+    <form asp-controller="Account" asp-action="DeleteUser" method="post">
+    <div class="form-group">
+        <dl class="dl-horizontal">
+            <dt>Пользователь</dt>
+            <dd>@Html.DisplayFor(model => model.username)</dd>
+        </dl>
+        
+            @Html.AntiForgeryToken()
+            <input type="submit" class="button" value="Удалить" />
+       
+    </div>
+    </form>
+</body>
+</html>

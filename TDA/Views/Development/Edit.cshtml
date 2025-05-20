@@ -1,0 +1,94 @@
+﻿@model TDA.Models.Project
+@{
+    ViewData["Title"] = "Edit";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .validation-summary-errors {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .field-validation-error {
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .button {
+            background-color: lightskyblue;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea,
+        select,
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <form asp-action="Edit" asp-controller="Development" asp-route-id="@Model.projectid" method="post">
+        <h2>Изменение данных проекта</h2>
+        <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label asp-for="project_name">Имя</label>
+            <input asp-for="project_name" class="form-control" />
+            <span asp-validation-for="project_name" class="field-validation-error"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="LeadId" class="control-label">Руководитель</label>
+            <input asp-for="LeadId" class="form-control" />
+            <span asp-validation-for="LeadId" class="field-validation-error"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="control-label">Введите описание проекта</label>
+            <input asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="field-validation-error"></span>
+        </div>
+        <div style="margin-top:10px;">
+            <input type="submit" value="Сохранить" class="button" />
+        </div>
+    </form>
+</body>
+</html>

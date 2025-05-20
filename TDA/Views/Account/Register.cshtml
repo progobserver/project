@@ -1,0 +1,74 @@
+﻿@model TDA.Models.RegisterModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <style>
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .button {
+            background-color: #3daed4;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .validation-summary-errors {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .field-validation-error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+   
+    <h2>Регистрация</h2>
+    <form asp-action="Register" asp-controller="Account" method="post">
+        <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label asp-for="Login">Введите Login</label>
+            <input asp-for="Login" class="form-control" />
+            <span asp-validation-for="Login" class="field-validation-error"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email">Введите Email</label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="field-validation-error"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password">Введите пароль</label>
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="field-validation-error"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ConfirmPassword">Повторите пароль</label>
+            <input asp-for="ConfirmPassword" class="form-control" />
+            <span asp-validation-for="ConfirmPassword" class="field-validation-error"></span>
+        </div>
+        <div style="margin-top:10px; text-align:center;">
+            <input class="button" type="submit" value="Регистрация" />
+        </div>
+    </form>
+</body>
+</html>

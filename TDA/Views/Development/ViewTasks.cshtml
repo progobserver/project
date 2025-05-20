@@ -1,0 +1,87 @@
+﻿@model IEnumerable<TDA.Models.ActualTask>
+
+<html>
+<head>
+    <style>
+
+        table {
+            width: 100%;
+            text-align: center;
+            border-bottom: 2px solid #dfdfdf;
+            border-radius: 6px;
+            border-collapse: separate;
+            border-spacing: 0px;
+        }
+
+            
+          
+    </style>
+</head>
+<body>
+    <h2>Список задач</h2>
+    <p><a href="/Development/CreateTask">Добавить задачу</a></p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Номер</th>
+                <th>Проект</th>
+                <th>Задача</th>
+                <th>Приоритет</th>
+                <th>Статус</th>
+                <th>Ответственный</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            @foreach (var task in Model)
+            {
+                var statusMessage = task.Status.StatusMessage;
+                string statusColor = "";
+
+                if (statusMessage == "Завершена")
+                {
+                    statusColor = "green"; 
+                }
+                else if (statusMessage == "Актуальный")
+                {
+                    statusColor = "pink"; 
+                }
+                else if (statusMessage == "В процессе" || statusMessage == "На доработке")
+                {
+                    statusColor = "yellow"; 
+                }
+                <tr>
+                    <td>@task.TaskId</td>
+                    <td>
+                        <a asp-action="TasksByProject" asp-controller="Development" asp-route-projectId="@task.Project.projectid">
+                            @task.Project.project_name
+                        </a>
+                    </td>
+                    <td>
+                        <a asp-controller="Development" asp-action="ViewSpecificTask" asp-route-id="@task.TaskId">
+                            @task.Title
+                        </a>
+                    </td>
+                    <td>@task.Priority.PriorityMessage</td>
+                    <td style="background-color:@statusColor">@statusMessage</td>
+                    <td>
+                        @if (task.AssignedUser != null)
+                        {
+                            @task.AssignedUser.username
+                        }
+                        else
+                        {
+                            <em>Не назначен</em>
+                        }
+                    </td>
+                    <td>
+                        <a asp-action="EditTask" asp-controller="Development" asp-route-id="@task.TaskId">Изменить</a> |
+                        <a asp-action="DeleteTask" asp-controller="Development" asp-route-id="@task.TaskId">Удалить</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

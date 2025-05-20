@@ -1,0 +1,164 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<html>
+<head>
+    <style>
+        body {
+        font-family: Arial;
+        margin: 0;
+        padding: 20px;
+        }
+
+        h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 28px;
+        }
+      
+        .section-header {
+        margin-top: 40px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        }
+       
+        .tasks-table {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto 30px auto;
+        }
+
+       
+        th {
+        background-color: lightskyblue;
+        padding: 10px;
+        text-align: left;
+        font-size: 16px;
+        border: 1px solid;
+        }
+
+        td {
+        padding: 10px;
+        border: 1px solid;
+        font-size: 15px;
+        }
+
+       
+
+        p {
+        max-width: 800px;
+        margin: 10px auto;
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.5;
+        }
+
+        .section {
+        margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ваши задачи</h2>
+
+    <div class="section">
+        <div class="section-header">Задачи в процессе</div>
+        <div>
+            @if (ViewBag.TasksInProgress != null && ((List<TDA.Models.ActualTask>)ViewBag.TasksInProgress).Count > 0)
+            {
+                <table class="tasks-table">
+                    <tr>
+                        <th>Название</th>
+                        <th>Описание</th>
+                        <th>Дедлайн</th>
+                        <th>Статус</th>
+                    </tr>
+                    @foreach (var task in (List<TDA.Models.ActualTask>)ViewBag.TasksInProgress)
+                    {
+                        var deadline = task.Deadline;
+                        string rowStyle = "";
+                        if (deadline.HasValue)
+                        {
+                            var daysRemaining = (deadline.Value.Date - DateTime.Now.Date).TotalDays;
+                            if (daysRemaining < 0)
+                            {
+                                rowStyle = "background-color: #ffcccc;"; // если просрочено
+                            }
+                            else if (daysRemaining <= 1)
+                            {
+                                rowStyle = "background-color: #ffe5b4;"; // если остался день
+                            }
+                        }
+                        <tr style="@rowStyle">
+                            <td>
+                                <a asp-controller="Development" asp-action="ViewSpecificTask" asp-route-id="@task.TaskId">
+                                    @task.Title
+                                </a>
+                            </td>
+                            <td>@task.Description</td>
+                            <td>@task.Deadline?.ToString("dd.MM.yyyy")</td>
+                            <td>@task.Status.StatusMessage</td>
+                        </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>Нет актуальных задач.</p>
+            }
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">Завершенные задачи</div>
+        <div>
+            @if (ViewBag.CompletedTasks != null && ((List<TDA.Models.ActualTask>)ViewBag.CompletedTasks).Count > 0)
+            {
+                <table class="tasks-table">
+                    <tr>
+                        <th>Заголовок</th>
+                        <th>Описание</th>
+                    </tr>
+                    @foreach (var task in (List<TDA.Models.ActualTask>)ViewBag.CompletedTasks)
+                    {
+                        <tr>
+                            <td>
+                                <a asp-controller="Development" asp-action="ViewSpecificTask" asp-route-id="@task.TaskId">
+                                    @task.Title
+                                </a>
+                            </td>
+                            <td>@task.Description</td>
+                        </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>Нет завершенных задач.</p>
+            }
+        </div>
+    </div>
+
+    <h2>Уведомления</h2>
+    <div class="section">
+        @if (ViewBag.Notifications != null && ((List<TDA.Models.Notification>)ViewBag.Notifications).Any())
+        {
+            var notifications = (List<TDA.Models.Notification>)ViewBag.Notifications;
+            <ul style="max-width:800px; margin:auto; padding-left:20px; list-style-type: disc;">
+                @foreach (var notification in notifications)
+                {
+                    <li>
+                        @notification.Message (@notification.CreatedAt.ToString("g"))
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>Нет новых уведомлений.</p>
+        }
+    </div>
+</body>
+</html>

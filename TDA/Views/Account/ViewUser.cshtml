@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TDA.Models.User>
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<body>
+    <h2>Список пользователей</h2>
+    <table class="table">
+        <thead>
+            <tr><th>Логин</th><th>Роль</th><th>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.username</td>
+                    <td>@user.Role.role_name</td>
+                    <td>
+                        <a asp-action="EditUser" asp-controller="Account" asp-route-id="@user.UserId">Изменить</a> |
+                        @if(@user.Role.role_name=="blocked")
+                        {
+                            <a asp-action="UnlockUser" asp-controller="Account" asp-route-id="@user.UserId">Разблокировать</a>
+                        }
+                        else
+                        {
+                            <a asp-action="BlockUser" asp-controller="Account" asp-route-id="@user.UserId">Заблокировать</a>
+
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
