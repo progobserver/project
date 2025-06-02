@@ -2,8 +2,8 @@
 {
 	public class Project
 	{
-		public int projectid { get; set; }
-		public string project_name { get; set; }
+		public int ProjectId { get; set; }
+		public string ProjectName { get; set; }
 		public string Description { get; set; }
 	
 		public DateTime CreatedAt { get; set; }

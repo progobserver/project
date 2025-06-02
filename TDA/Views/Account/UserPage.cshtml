@@ -66,26 +66,26 @@
     <h2>Ваш профиль</h2>
     @if (User.IsInRole("admin"))
     {
-        <p><a href="/Account/ViewUser">Список пользователей</a></p>
+        <p><a href="/Admin/ViewUser">Список пользователей</a></p>
     }
     <div class="profile-table">
         <table>
             <tr>
                 <th>Имя пользователя</th>
-                <td>@Model.username</td>
+                <td>@Model.Username</td>
                 <a asp-action="ProfileEdit" asp-controller="Account" asp-route-id="@Model.UserId" style="margin-right:10px; font-size:14px;  color:blue;">Изменить</a>
             </tr>
             <tr>
                 <th>Email</th>
-                <td>@Model.email</td>
+                <td>@Model.Email</td>
             </tr>
             <tr>
-                <th>Дата создания</th>
-                <td>@Model.created_at.ToString("dd.MM.yyyy")</td>
+                <th>Дата регистрации</th>
+                <td>@Model.CreatedAt.ToString("dd.MM.yyyy")</td>
             </tr>
             <tr>
                 <th>Роль</th>
-                <td>@(Model.Role.role_name)</td>
+                <td>@(Model.Role.RoleName)</td>
             </tr>
         </table>
     </div>

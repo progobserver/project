@@ -12,138 +12,13 @@ using System.Configuration;
 
 namespace TDA.Controllers
 {
-	
-
 	public class DevelopmentController : Controller
 	{
-		TdaDbcontext db;
+		private TdaDbcontext db;
 		public DevelopmentController(TdaDbcontext context)
 		{
 			db = context;
 		}
-
-
-
-		[Authorize(Roles = "admin, manager")]
-		[HttpGet]
-		public IActionResult CreateProject()
-		{
-			
-			var users = db.Users.Select(u => new { u.UserId, u.username }).ToList();
-			
-			ViewBag.UsersList = users;
-
-			return View();
-		}
-
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> CreateProject(ProjectModel model)
-		{
-			var userList = db.Users.Select(u => new { u.UserId, u.username }).ToList();
-
-
-			if (ModelState.IsValid)
-			{
-				Project? proj = await db.Projects.FirstOrDefaultAsync(u => u.project_name == model.Name);
-				if (proj == null)
-				{
-					proj = new Project { project_name = model.Name, Description = model.Description, CreatedAt = DateTime.Now };
-					User? lead = await db.Users.FirstOrDefaultAsync(u => u.UserId == model.LeadId);
-					if (lead != null)
-					{
-						proj.Lead = lead;
-					}
-					else
-					{
-						ModelState.AddModelError("", "Некорректные данные руководителя");
-						 userList = db.Users.Select(u => new { u.UserId, u.username }).ToList();
-						ViewBag.UsersList = userList;
-						return View();
-					}
-					db.Projects.Add(proj);
-					await db.SaveChangesAsync();
-					return RedirectToAction("ViewProject", "Development");
-				}
-				else
-					ModelState.AddModelError("", "Некорректные данные");
-			}
-			else
-			{
-				ModelState.AddModelError("", "Некорректные данные");
-			}
-			userList = db.Users.Select(u => new { u.UserId, u.username }).ToList();
-			ViewBag.UsersList = userList;
-			return View(model);
-		}
-
-
-		[Authorize(Roles = "admin, manager, user")]
-		[HttpGet]
-		public IActionResult ViewProject()
-		{
-			return View(db.Projects.Include(p => p.Lead).ToList());
-		}
-
-		public async Task<IActionResult> Edit(int? id)
-		{
-			if (id != null)
-			{
-				Project? project = await db.Projects.FirstOrDefaultAsync(p => p.projectid == id);
-				if (project != null)
-
-					return View(project);
-			}
-			return NotFound();
-		}
-		[HttpPost]
-		public async Task<IActionResult> Edit(Project model, int id)
-		{
-			Project? proj = await db.Projects.FirstOrDefaultAsync(p => p.projectid == id);
-			if (proj != null)
-			{
-				proj.project_name = model.project_name;
-				proj.Description = model.Description;
-				proj.UpdatedAt = DateTime.Now;
-				//   proj.LeadId = model.LeadId;
-				User? lead = await db.Users.FirstOrDefaultAsync(u => u.UserId == model.LeadId);
-				proj.Lead = lead;
-				db.Projects.Update(proj);
-				await db.SaveChangesAsync();
-			}
-			return RedirectToAction("ViewProject");
-		}
-
-		[HttpGet]
-		[ActionName("Delete")]
-		public async Task<IActionResult> ConfirmDelete(int? id)
-		{
-			if (id != null)
-			{
-				Project? project = await db.Projects.FirstOrDefaultAsync(p => p.projectid == id);
-				if (project != null)
-					return View(project);
-			}
-			return NotFound();
-		}
-
-		[HttpPost]
-		public async Task<IActionResult> Delete(int? id)
-		{
-			if (id != null)
-			{
-				Project? project = await db.Projects.FirstOrDefaultAsync(p => p.projectid == id);
-				if (project != null)
-				{
-					db.Projects.Remove(project);
-					await db.SaveChangesAsync();
-					return RedirectToAction("ViewProject");
-				}
-			}
-			return NotFound();
-		}
-
-
 		
 		[Authorize(Roles = "admin, user")]
 		[HttpGet]
@@ -233,8 +108,8 @@ namespace TDA.Controllers
 			var commits = GetCommitInfosForTask(taskId);
 			foreach (var commit in commits)
 			{
-				// ищем пользователя по email или username
-				User? user = await db.Users.FirstOrDefaultAsync(u => u.username == commit.Username);
+				// ищем пользователя  username
+				User? user = await db.Users.FirstOrDefaultAsync(u => u.Username == commit.Username);
 				if (user != null)
 				{
 					Notification notification = new Notification
@@ -285,8 +160,8 @@ namespace TDA.Controllers
 			var commits = GetCommitInfosForTask(taskId);
 			foreach (var commit in commits)
 			{
-				// Ищем пользователя по email или username
-				User? user = await db.Users.FirstOrDefaultAsync(u => u.username == commit.Username);
+				// Ищем пользователя или username
+				User? user = await db.Users.FirstOrDefaultAsync(u => u.Username == commit.Username);
 				if (user != null)
 				{
 					Notification notification = new Notification
@@ -337,7 +212,7 @@ namespace TDA.Controllers
 					actualtask.Deadline = model.Deadline;
 
 					// Связь с проектом
-					Project? proj = await db.Projects.FirstOrDefaultAsync(r => r.project_name == model.Project);
+					Project? proj = await db.Projects.FirstOrDefaultAsync(r => r.ProjectName == model.Project);
 					if (proj != null)
 					{
 						actualtask.Project = proj;
@@ -379,7 +254,7 @@ namespace TDA.Controllers
 					.ThenInclude(t => t.Priority)
 				.Include(p => p.Tasks)
 					.ThenInclude(t => t.Status)
-				.FirstOrDefault(p => p.projectid == projectId);
+				.FirstOrDefault(p => p.ProjectId == projectId);
 
 			if (project == null)
 			{
@@ -422,7 +297,7 @@ namespace TDA.Controllers
 				actualtask.Description = model.Description;
 				actualtask.UpdatedAt = DateTime.Now;
 				actualtask.Deadline = model.Deadline;
-				Project? proj = await db.Projects.FirstOrDefaultAsync(r => r.project_name == model.Project.project_name);
+				Project? proj = await db.Projects.FirstOrDefaultAsync(r => r.ProjectName == model.Project.ProjectName);
 				//if (proj != null)
 
 				actualtask.Project = proj;
@@ -502,16 +377,22 @@ namespace TDA.Controllers
 
 			return RedirectToAction("ViewTasks");
 		}			
-		private string connectionString ="server=localhost;database=taskdb;UserId=root;password=mysql;";
+		private string connectionString ="server=localhost;database=newtdatabase;UserId=root;password=mysql;";
 		private List<CommitInfo> GetCommitInfosForTask(int taskId)
 		{
 			var commits = new List<CommitInfo>();
 
 			MySqlConnection connection = new MySqlConnection(connectionString);
 			connection.Open();
+
+			string TableCheck = "CREATE TABLE IF NOT EXISTS commitinfos (commitId INT PRIMARY KEY AUTO_INCREMENT," +
+			" username VARCHAR(400), email VARCHAR(400), compareurl VARCHAR (500), message VARCHAR (500), taskid INT)";
 			string query = "SELECT commitId, username, email, compareurl, message, taskid FROM commitinfos WHERE taskid = @taskId";
 			MySqlCommand cmd = new MySqlCommand();
 			cmd.Connection = connection;
+			cmd.CommandText = TableCheck;
+			cmd.ExecuteNonQuery();
+			
 			cmd.Parameters.AddWithValue("@taskid", taskId);
 			cmd.CommandText = query;
 			var reader = cmd.ExecuteReader();
@@ -611,7 +492,7 @@ namespace TDA.Controllers
 						Notification notification = new Notification
 						{
 							UserId = recipientUserId,
-							Message = $"Появился новый комментарий по задаче {task.Title} от {user.username}",
+							Message = $"Появился новый комментарий по задаче {task.Title} от {user.Username}",
 							CreatedAt = DateTime.Now,
 							//IsRead = false
 						};

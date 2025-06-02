@@ -3,7 +3,6 @@
 <html>
 <head>
     <style>
-
         table {
             width: 100%;
             text-align: center;
@@ -11,10 +10,7 @@
             border-radius: 6px;
             border-collapse: separate;
             border-spacing: 0px;
-        }
-
-            
-          
+        }           
     </style>
 </head>
 <body>
@@ -54,8 +50,8 @@
                 <tr>
                     <td>@task.TaskId</td>
                     <td>
-                        <a asp-action="TasksByProject" asp-controller="Development" asp-route-projectId="@task.Project.projectid">
-                            @task.Project.project_name
+                        <a asp-action="TasksByProject" asp-controller="Development" asp-route-projectId="@task.Project.ProjectId">
+                            @task.Project.ProjectName
                         </a>
                     </td>
                     <td>
@@ -68,7 +64,7 @@
                     <td>
                         @if (task.AssignedUser != null)
                         {
-                            @task.AssignedUser.username
+                            @task.AssignedUser.Username
                         }
                         else
                         {

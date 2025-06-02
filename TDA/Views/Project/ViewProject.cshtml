@@ -51,7 +51,7 @@
     <h2>Список проектов</h2>
     @if (User.IsInRole("admin") || User.IsInRole("manager"))
     {
-        <p><a href="/Development/CreateProject">Добавить проект</a></p>
+        <p><a href="/Project/CreateProject">Добавить проект</a></p>
     }
     <table class="table">
         <thead>
@@ -62,16 +62,16 @@
             {
                 <tr>
                     <td>
-                        <a asp-action="TasksByProject" asp-controller="Development" asp-route-projectId="@project.projectid">
-                            @project.project_name
+                        <a asp-action="TasksByProject" asp-controller="Development" asp-route-projectId="@project.ProjectId">
+                            @project.ProjectName
                         </a>
                     </td>
-                    <td>@project.Lead.username</td>
+                    <td>@project.Lead.Username</td>
                     <td>
                         @if (User.IsInRole("admin") || User.IsInRole("manager"))
                         {
-                            <a asp-action="Edit" asp-controller="Development" asp-route-id="@project.projectid">Изменить</a>
-                            <a asp-action = "Delete" asp-controller = "Development" asp-route-id = "@project.projectid" > Удалить </a>
+                            <a asp-action="Edit" asp-controller="Project" asp-route-id="@project.ProjectId">Изменить</a>
+                            <a asp-action = "Delete" asp-controller = "Project" asp-route-id = "@project.ProjectId" > Удалить </a>
                             }
                         else
                         {

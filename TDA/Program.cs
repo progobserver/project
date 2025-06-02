@@ -7,11 +7,9 @@ using TDA.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Добавляем строку подключения (замените на свою)
+// Добавляем строку подключения
 string? connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<TdaDbcontext>(options =>options.UseMySQL(connectionString));
-
-
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

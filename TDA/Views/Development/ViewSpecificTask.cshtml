@@ -111,7 +111,7 @@
         </div>
         <div class="field">
             <div class="label">Проект:</div>
-            <div class="value">@Model.Project.project_name</div>
+            <div class="value">@Model.Project.ProjectName</div>
         </div>
         <div class="field">
             <div class="label">Описание:</div>
@@ -134,7 +134,7 @@
             <div class="value">
                 @if (Model.AssignedUser != null)
                 {
-                    @Model.AssignedUser.username
+                    @Model.AssignedUser.Username
                 }
                 else
                 {
@@ -213,7 +213,7 @@
                 @foreach (var comment in comments)
                 {
                     <li style="margin-bottom:10px; padding:10px; border-radius:5px; position:relative;">
-                        <strong>@comment.User.username</strong> (@comment.CreatedAt.ToString("dd.MM.yyyy HH:mm"))<br />
+                        <strong>@comment.User.Username</strong> (@comment.CreatedAt.ToString("dd.MM.yyyy HH:mm"))<br />
                         @comment.CommentText
                         @if (User.IsInRole("admin"))
                         {

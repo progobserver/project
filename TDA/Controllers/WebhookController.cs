@@ -1,28 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using TDA.Models;
-using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using Newtonsoft.Json;
 using MySql.Data.MySqlClient;
 using Microsoft.EntityFrameworkCore;
-using static Microsoft.AspNetCore.Razor.Language.TagHelperMetadata;
-using System.Xml.Linq;
-using Mysqlx.Crud;
 
 namespace TDA.Controllers
 {
-
 	[ApiController]
 	public class WebhookController : Controller
 	{
-		private readonly TdaDbcontext _dbContext;
+		private readonly TdaDbcontext db;
 		public WebhookController(TdaDbcontext dbContext)
 		{
-			_dbContext = dbContext;
+			db = dbContext;
 		}
 
 		[Route("api/Main")]
@@ -43,14 +34,10 @@ namespace TDA.Controllers
 
 			string url = test.compare_url;
 			if (test?.Commits != null && test.Commits.Any())
-			{
-				
-
+			{				
 				foreach (var commit in test.Commits)
 				{
 					string jsonString = requestBody;
-
-
 
 					MySqlConnectionStringBuilder connectionStringBuilder = new MySqlConnectionStringBuilder();
 					connectionStringBuilder.Server = "localhost";
@@ -58,7 +45,6 @@ namespace TDA.Controllers
 					connectionStringBuilder.Password = "mysql";
 					connectionStringBuilder.Database = "taskdb";
 					MySqlConnection connection = new MySqlConnection(connectionStringBuilder.ToString());
-
 
 					var usernameClaim = User?.Claims.FirstOrDefault(c => c.Type == ClaimsIdentity.DefaultNameClaimType);
 					string username = AppState.CurrentUserName;                 
@@ -81,19 +67,17 @@ namespace TDA.Controllers
 						command.ExecuteNonQuery();
 						command.CommandText = addquery;
 						command.ExecuteNonQuery();
-
 						connection.Close();
 					}
 					catch
 					{
-						throw new Exception("error");
+						throw new Exception("Error");
 					}
 					finally
 					{
-						var task = await _dbContext.Tasks.Include(t => t.Project).FirstOrDefaultAsync(t => t.TaskId == messageid);
+						var task = await db.Tasks.Include(t => t.Project).FirstOrDefaultAsync(t => t.TaskId == messageid);
 						if (task != null && task.Project != null)
 						{
-
 							int leadId = task.Project.LeadId;
 
 							// Создаем уведомление для Lead
@@ -104,8 +88,8 @@ namespace TDA.Controllers
 								CreatedAt = DateTime.Now,
 								//IsRead = false
 							};
-							_dbContext.Notifications.Add(notification);
-							await _dbContext.SaveChangesAsync();
+							db.Notifications.Add(notification);
+							await db.SaveChangesAsync();
 						}
 					}
 				}
@@ -119,11 +103,6 @@ namespace TDA.Controllers
 			{
 				return "not OK";
 			}
-
-			
-
-
 		} 
 	}
-
 }

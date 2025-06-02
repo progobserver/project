@@ -30,10 +30,10 @@ namespace TDA.Models
 			base.OnModelCreating(modelBuilder);
 
 			//инициализация данных для Roles
-			modelBuilder.Entity<Role>().HasData(new Role { RoleId = 1, role_name = "admin" },
-				new Role {RoleId=2, role_name="manager"},
-				new Role {RoleId=3, role_name="user"},
-				new Role {RoleId=4, role_name="blocked"});
+			modelBuilder.Entity<Role>().HasData(new Role { RoleId = 1, RoleName = "admin" },
+				new Role {RoleId=2, RoleName="manager"},
+				new Role {RoleId=3, RoleName="user"},
+				new Role {RoleId=4, RoleName="blocked"});
 
 			// инициализация данных для Statuses
 			modelBuilder.Entity<Status>().HasData( new Status { StatusId = 1, StatusMessage = "Актуальный" },
@@ -66,7 +66,7 @@ namespace TDA.Models
 
 			modelBuilder.Entity<ProjectParticipant>()
 				.HasOne(pp => pp.User)
-				.WithMany(u => u.project_participants)
+				.WithMany(u => u.ProjectParticipants)
 				.HasForeignKey(pp => pp.UserId);
 
 			modelBuilder.Entity<ActualTask>().HasKey(p => p.TaskId);
@@ -105,7 +105,7 @@ namespace TDA.Models
 				entity.HasKey(e => e.TaskId);
 
 				entity.HasOne(e => e.Status)
-					.WithMany(s => s.tasks)
+					.WithMany(s => s.Tasks)
 					.HasForeignKey(e => e.StatusId)
 					.IsRequired(); 
 			});
@@ -119,7 +119,7 @@ namespace TDA.Models
 			modelBuilder.Entity<ActualTask>(entity =>
 			{
 				entity.HasOne(e => e.Priority)
-					.WithMany(s => s.tasks)
+					.WithMany(s => s.Tasks)
 					.HasForeignKey(e => e.PriorityId)
 					.IsRequired();
 			});

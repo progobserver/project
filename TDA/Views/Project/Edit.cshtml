@@ -67,18 +67,20 @@
     </style>
 </head>
 <body>
-    <form asp-action="Edit" asp-controller="Development" asp-route-id="@Model.projectid" method="post">
+    <form asp-action="Edit" asp-controller="Project" asp-route-id="@Model.ProjectId" method="post">
         <h2>Изменение данных проекта</h2>
         <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
         @Html.AntiForgeryToken()
         <div class="form-group">
-            <label asp-for="project_name">Имя</label>
-            <input asp-for="project_name" class="form-control" />
-            <span asp-validation-for="project_name" class="field-validation-error"></span>
+            <label asp-for="ProjectName">Имя</label>
+            <input asp-for="ProjectName" class="form-control" />
+            <span asp-validation-for="ProjectName" class="field-validation-error"></span>
         </div>
         <div class="form-group">
-            <label asp-for="LeadId" class="control-label">Руководитель</label>
-            <input asp-for="LeadId" class="form-control" />
+            <label asp-for="LeadId">Выберите руководителя</label>
+            <select asp-for="LeadId" class="form-control" asp-items="@(new SelectList(ViewBag.UsersList, "UserId", "Username"))">
+                <option value="">-- Выберите руководителя --</option>
+            </select>
             <span asp-validation-for="LeadId" class="field-validation-error"></span>
         </div>
         <div class="form-group">

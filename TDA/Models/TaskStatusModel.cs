@@ -5,6 +5,6 @@
 		public int StatusId { get; set; }
 		public string StatusMessage { get; set; }
 
-		public ICollection<ActualTask> tasks { get; set; }
+		public ICollection<ActualTask> Tasks { get; set; }
 	}
 }

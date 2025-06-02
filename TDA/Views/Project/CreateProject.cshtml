@@ -64,7 +64,7 @@
     </style>
 </head>
 <body>
-    <form asp-action="CreateProject" asp-controller="Development" asp-anti-forgery="true" method="post">
+    <form asp-action="CreateProject" asp-controller="Project" asp-anti-forgery="true" method="post">
         <h2>Создание проекта</h2>
         <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
         @Html.AntiForgeryToken()
@@ -75,7 +75,7 @@
         </div>
         <div class="form-group">
             <label asp-for="LeadId">Выберите руководителя</label>
-            <select asp-for="LeadId" class="form-control" asp-items="@(new SelectList(ViewBag.UsersList, "UserId", "username"))">
+            <select asp-for="LeadId" class="form-control" asp-items="@(new SelectList(ViewBag.UsersList, "UserId", "Username"))">
                 <option value="">-- Выберите руководителя --</option>
             </select>
             <span asp-validation-for="LeadId" class="field-validation-error"></span>

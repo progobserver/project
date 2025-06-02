@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\userone\\Desktop\\TDA\\TDA\\TDA.csproj": {}
+    "C:\\Users\\userone\\Desktop\\coding\\project — копия\\TDA\\TDA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\userone\\Desktop\\TDA\\TDA\\TDA.csproj": {
+    "C:\\Users\\userone\\Desktop\\coding\\project — копия\\TDA\\TDA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\userone\\Desktop\\TDA\\TDA\\TDA.csproj",
+        "projectUniqueName": "C:\\Users\\userone\\Desktop\\coding\\project — копия\\TDA\\TDA.csproj",
         "projectName": "TDA",
-        "projectPath": "C:\\Users\\userone\\Desktop\\TDA\\TDA\\TDA.csproj",
+        "projectPath": "C:\\Users\\userone\\Desktop\\coding\\project — копия\\TDA\\TDA.csproj",
         "packagesPath": "C:\\Users\\userone\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\userone\\Desktop\\TDA\\TDA\\obj\\",
+        "outputPath": "C:\\Users\\userone\\Desktop\\coding\\project — копия\\TDA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -65,24 +65,24 @@
     </style>
 </head>
 <body>
-    <form asp-action="EditUser" asp-controller="Account" asp-route-id="@Model.UserId" method="post">
+    <form asp-action="EditUser" asp-controller="Admin" asp-route-id="@Model.UserId" method="post">
         <h2>Изменение данных пользователя</h2>
         <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
         @Html.AntiForgeryToken()
         <div class="form-group">
-            <label asp-for="username">Имя</label>
-            <input asp-for="username" class="form-control" />
-            <span asp-validation-for="username" class="field-validation-error"></span>
+            <label asp-for="Username">Имя</label>
+            <input asp-for="Username" class="form-control" />
+            <span asp-validation-for="Username" class="field-validation-error"></span>
         </div>
         <div class="form-group">
-            <label asp-for="Role.role_name" class="control-label">Роль</label>
-            <input asp-for="Role.role_name" class="form-control" />
-            <span asp-validation-for="Role.role_name" class="field-validation-error"></span>
+            <label asp-for="Role.RoleName" class="control-label">Роль</label>
+            <input asp-for="Role.RoleName" class="form-control" />
+            <span asp-validation-for="Role.RoleName" class="field-validation-error"></span>
         </div>
         <div class="form-group">
-            <label asp-for="email" class="control-label">Email</label>
-            <input asp-for="email" class="form-control" />
-            <span asp-validation-for="email" class="field-validation-error"></span>
+            <label asp-for="Email" class="control-label">Email</label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="field-validation-error"></span>
         </div>
         <div style="margin-top:10px;">
             <input type="submit" value="Сохранить" class="button" />

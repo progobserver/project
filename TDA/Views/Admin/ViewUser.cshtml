@@ -14,17 +14,17 @@
             @foreach (var user in Model)
             {
                 <tr>
-                    <td>@user.username</td>
-                    <td>@user.Role.role_name</td>
+                    <td>@user.Username</td>
+                    <td>@user.Role.RoleName</td>
                     <td>
-                        <a asp-action="EditUser" asp-controller="Account" asp-route-id="@user.UserId">Изменить</a> |
-                        @if(@user.Role.role_name=="blocked")
+                        <a asp-action="EditUser" asp-controller="Admin" asp-route-id="@user.UserId">Изменить</a> |
+                        @if(@user.Role.RoleName=="blocked")
                         {
-                            <a asp-action="UnlockUser" asp-controller="Account" asp-route-id="@user.UserId">Разблокировать</a>
+                            <a asp-action="UnlockUser" asp-controller="Admin" asp-route-id="@user.UserId">Разблокировать</a>
                         }
                         else
                         {
-                            <a asp-action="BlockUser" asp-controller="Account" asp-route-id="@user.UserId">Заблокировать</a>
+                            <a asp-action="BlockUser" asp-controller="Admin" asp-route-id="@user.UserId">Заблокировать</a>
 
                         }
                     </td>

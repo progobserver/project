@@ -9,7 +9,7 @@ namespace TDA.Controllers
 {
     public class HomeController : Controller
     {
-        TdaDbcontext db;
+        private TdaDbcontext db;
         private readonly ILogger<HomeController> _logger;
 		
 		public HomeController(ILogger<HomeController> logger, TdaDbcontext dbContext)
@@ -39,14 +39,14 @@ namespace TDA.Controllers
                     }
 					string? userName = User.FindFirstValue(ClaimTypes.Name);
 
-					User? user = await db.Users.Include(u => u.Role).FirstOrDefaultAsync(u => u.username == userName);
+					User? user = await db.Users.Include(u => u.Role).FirstOrDefaultAsync(u => u.Username == userName);
 					var inProgressStatus = await db.Statuses.Where(s => s.StatusMessage == "В процессе" || s.StatusMessage == "На проверке" || s.StatusMessage == "На доработке")
 					.Select(s => s.StatusId).ToListAsync();
 					if (inProgressStatus != null)
 					{
 						// получаем список актуальных задач
 						var tasksInProgress = await db.Tasks
-							.Where(t => inProgressStatus.Contains(t.StatusId) && t.AssignedUser != null && t.AssignedUser.username == userName)
+							.Where(t => inProgressStatus.Contains(t.StatusId) && t.AssignedUser != null && t.AssignedUser.Username == userName)
 							.Include(t => t.Status)
 							.Include(t => t.AssignedUser)
 							.ToListAsync();
@@ -61,7 +61,7 @@ namespace TDA.Controllers
 					{
 						// список решенных задач
 						var completedTask = await db.Tasks
-							.Where(t => t.StatusId == CompletedStatus.StatusId && t.AssignedUser != null && t.AssignedUser.username == userName)
+							.Where(t => t.StatusId == CompletedStatus.StatusId && t.AssignedUser != null && t.AssignedUser.Username == userName)
 							.Include(t => t.Status)
 							.Include(t => t.AssignedUser)
 							.ToListAsync();
@@ -73,12 +73,12 @@ namespace TDA.Controllers
                 }
                 else
                 {
-                    return RedirectToAction("Login", "Account");
+                    return RedirectToAction("Login", "Auth");
                 }
             }
             else
             {
-                return RedirectToAction("AdminReg", "Account");
+                return RedirectToAction("AdminReg", "Register");
             }
 		}
 
