@@ -377,7 +377,7 @@ namespace TDA.Controllers
 
 			return RedirectToAction("ViewTasks");
 		}			
-		private string connectionString ="server=localhost;database=newtdatabase;UserId=root;password=mysql;";
+		private string connectionString ="server=localhost;database=taskdb;UserId=root;password=mysql;";
 		private List<CommitInfo> GetCommitInfosForTask(int taskId)
 		{
 			var commits = new List<CommitInfo>();

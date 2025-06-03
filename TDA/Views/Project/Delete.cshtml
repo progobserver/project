@@ -5,51 +5,7 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 <html>
 <head>
-    <style>
-        body {
-            background-color: #f8f9fb;
-            font-family: Arial, sans-serif;
-        }
-
-        form {
-            max-width: 500px;
-            margin: auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .button {
-            background-color: #3daed4;
-            border: none;
-            color: white;
-            padding: 12px 24px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 4px;
-            margin-top: 20px;
-        }
-
-        dl {
-            display: inline-block;
-            text-align: left;
-        }
-
-        dt {
-            font-weight: bold;
-        }
-
-        dd {
-            margin: 0 0 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
 </head>
 <body>
     <h2>Подтвердите удаление</h2>
@@ -62,7 +18,7 @@
         </dl>
         <form asp-controller="Project" asp-action="Delete" method="post">
             @Html.AntiForgeryToken()
-            <input type="submit" class="button" value="Удалить" />
+            <input type="submit" class="delete-button" value="Удалить" />
         </form>
     </div>
 </body>

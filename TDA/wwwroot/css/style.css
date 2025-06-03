@@ -1,0 +1,93 @@
+body {
+    background-color: #f8f9fb;
+}
+
+/* Стиль для форм */
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Стиль для кнопок */
+.button {
+    background-color: #3daed4;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-button {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+/* Заголовки */
+h2 {
+    text-align: center;
+}
+
+/* Стиль для сообщений ошибок и предупреждений */
+.validation-summary-errors {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.field-validation-error {
+    color: red;
+    font-size: 0.9em;
+}
+
+/* Таблицы */
+table {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #dfdfdf;
+    border-radius: 6px;
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+
+/* Заголовки таблицы */
+table thead tr {
+    color: #ffffff;
+    font-weight: bold;
+    background: #00bf80;
+}
+
+/* Ячейки таблицы */
+table tr td {
+    border-right: 1px solid #dfdfdf;
+}
+
+/* Удаление правой границы у последней ячейки в строке */
+table tr td:last-child {
+    border-right: 0;
+}
+
+/* Окраска строк таблицы по очереди */
+table tbody tr:nth-child(odd) {
+    background: #f6f6f6;
+}
+
+table tbody tr:nth-child(even) {
+    background: #e6e6e6;
+}
+
+/* Эффект при наведении на строку таблицы */
+table tbody tr:hover {
+    background: #ffe8e8;
+    transition-duration: 0.6s;
+}

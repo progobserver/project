@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\views\\project\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\views\\project\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,24 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Views\\Project\\Delete.cshtml",
-              "RelativeDocumentMoniker": "TDA\\Views\\Project\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Views\\Project\\Delete.cshtml",
-              "RelativeToolTip": "TDA\\Views\\Project\\Delete.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAABgAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-02T12:03:15.344Z",
-              "EditorCaption": ""
             }
           ]
         }

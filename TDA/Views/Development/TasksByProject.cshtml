@@ -1,5 +1,9 @@
 ﻿@model IEnumerable<TDA.Models.ActualTask>
 
+<head>
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true">
+</head>
+<body>
 <h2>Задачи проекта</h2>
 <h3>@Model.FirstOrDefault()?.Project?.ProjectName</h3>
 <p>@Model.FirstOrDefault()?.Project?.Description </p>
@@ -58,3 +62,4 @@
         }
     </tbody>
 </table>
+</body>
