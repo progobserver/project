@@ -16,7 +16,7 @@ namespace TDA.Controllers
 			db = dbContext;
 		}
 
-		[Route("api/Main")]
+		[Route("api/Main")] //для проверки
 		[HttpGet]
 		public async Task<string> Main1()
 		{
@@ -34,12 +34,14 @@ namespace TDA.Controllers
 
 			string url = test.compare_url;
 			if (test?.Commits != null && test.Commits.Any())
-			{				
+			{
+				//заполняем таблицу в БД информацией о коммите
 				foreach (var commit in test.Commits)
 				{
 					string jsonString = requestBody;
 
 					MySqlConnectionStringBuilder connectionStringBuilder = new MySqlConnectionStringBuilder();
+					//параметры строки подключения
 					connectionStringBuilder.Server = "localhost";
 					connectionStringBuilder.UserID = "root";
 					connectionStringBuilder.Password = "mysql";

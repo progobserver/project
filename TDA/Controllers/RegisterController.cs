@@ -17,6 +17,8 @@ namespace TDA.Controllers
 			db = context;
 		}
 		[HttpGet]
+
+		//регистрация пользователя
 		public IActionResult Register()
 		{
 			return View();
@@ -65,6 +67,13 @@ namespace TDA.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> AdminReg(RegisterModel model)
 		{
+			bool usersExist = await db.Users.AnyAsync();
+			if (usersExist)
+			{
+				// Если пользователи уже есть, перенаправляем на страницу регистрации
+				return RedirectToAction("Register", "Register");
+			}
+
 			if (ModelState.IsValid)
 			{
 				var existingUser = await db.Users.FirstOrDefaultAsync(u => u.Username == model.Login);

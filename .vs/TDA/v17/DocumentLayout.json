@@ -1,7 +1,100 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\controllers\\developmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\controllers\\developmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\projectcreationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\projectcreationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\notificationsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\notificationsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\hookeventpayload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\hookeventpayload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\actualtaskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\actualtaskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\projectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\projectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\projectparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\projectparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\taskcommentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\taskcommentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\taskprioritymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\taskprioritymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\taskstatusmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\taskstatusmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\models\\tdadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\models\\tdadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\controllers\\webhookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\controllers\\webhookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|c:\\users\\userone\\desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\tda\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FADEBB6-6368-4F27-A499-CD830F441497}|TDA\\TDA.csproj|solutionrelative:tda\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +102,310 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegisterController.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\RegisterController.cs",
+              "RelativeDocumentMoniker": "TDA\\Controllers\\RegisterController.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\RegisterController.cs",
+              "RelativeToolTip": "TDA\\Controllers\\RegisterController.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAcwHUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:14:38.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "TDA\\Controllers\\ProjectController.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "TDA\\Controllers\\ProjectController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAUwGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:14:36.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DevelopmentController.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\DevelopmentController.cs",
+              "RelativeDocumentMoniker": "TDA\\Controllers\\DevelopmentController.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\DevelopmentController.cs",
+              "RelativeToolTip": "TDA\\Controllers\\DevelopmentController.cs",
+              "ViewState": "AgIAADcBAAAAAAAAAAAAADcBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:14:33.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "TDA\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "TDA\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:14:00.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "TDA\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "TDA\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:10:34.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProjectCreationModel.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\ProjectCreationModel.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\ProjectCreationModel.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\ProjectCreationModel.cs",
+              "RelativeToolTip": "TDA\\Models\\ProjectCreationModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:21:35.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NotificationsModel.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\NotificationsModel.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\NotificationsModel.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\NotificationsModel.cs",
+              "RelativeToolTip": "TDA\\Models\\NotificationsModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:21:29.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\LoginModel.cs",
+              "RelativeToolTip": "TDA\\Models\\LoginModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:21:27.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HookEventPayload.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\HookEventPayload.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\HookEventPayload.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\HookEventPayload.cs",
+              "RelativeToolTip": "TDA\\Models\\HookEventPayload.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:21:25.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "TDA\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:21:22.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ActualTaskModel.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\ActualTaskModel.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\ActualTaskModel.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\ActualTaskModel.cs",
+              "RelativeToolTip": "TDA\\Models\\ActualTaskModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:21:12.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProjectModel.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\ProjectModel.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\ProjectModel.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\ProjectModel.cs",
+              "RelativeToolTip": "TDA\\Models\\ProjectModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:21:07.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProjectParticipant.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\ProjectParticipant.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\ProjectParticipant.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\ProjectParticipant.cs",
+              "RelativeToolTip": "TDA\\Models\\ProjectParticipant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:21:05.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RegisterModel.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\RegisterModel.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\RegisterModel.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\RegisterModel.cs",
+              "RelativeToolTip": "TDA\\Models\\RegisterModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:21:04.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TaskCommentModel.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\TaskCommentModel.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\TaskCommentModel.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\TaskCommentModel.cs",
+              "RelativeToolTip": "TDA\\Models\\TaskCommentModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:20:59.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TaskModel.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\TaskModel.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\TaskModel.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\TaskModel.cs",
+              "RelativeToolTip": "TDA\\Models\\TaskModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:20:54.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TaskPriorityModel.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\TaskPriorityModel.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\TaskPriorityModel.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\TaskPriorityModel.cs",
+              "RelativeToolTip": "TDA\\Models\\TaskPriorityModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:20:53.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TaskStatusModel.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\TaskStatusModel.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\TaskStatusModel.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\TaskStatusModel.cs",
+              "RelativeToolTip": "TDA\\Models\\TaskStatusModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:20:42.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\UserModel.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\UserModel.cs",
+              "RelativeToolTip": "TDA\\Models\\UserModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:20:02.461Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TdaDbcontext.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\TdaDbcontext.cs",
+              "RelativeDocumentMoniker": "TDA\\Models\\TdaDbcontext.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Models\\TdaDbcontext.cs",
+              "RelativeToolTip": "TDA\\Models\\TdaDbcontext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:20:02.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "WebhookController.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\WebhookController.cs",
+              "RelativeDocumentMoniker": "TDA\\Controllers\\WebhookController.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\WebhookController.cs",
+              "RelativeToolTip": "TDA\\Controllers\\WebhookController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAiwG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:14:40.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TDA\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TDA\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:14:34.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "TDA\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\userone\\Desktop\\coding\\project \u2014 \u043A\u043E\u043F\u0438\u044F\\TDA\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "TDA\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAHIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:07:17.851Z",
+              "EditorCaption": ""
             }
           ]
         }

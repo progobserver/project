@@ -32,6 +32,7 @@ namespace TDA.Controllers
 				.ToList());
 		}
 
+		//просмотр страницы конкретной задачи
 		public async Task<IActionResult> ViewSpecificTask(int id)
 		{
 			string? userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -69,6 +70,7 @@ namespace TDA.Controllers
 		}
 
 
+		//принятие и закрытие задачи
 		[HttpPost]
 		public async Task<IActionResult> AcceptTaskAndClose(int taskId)
 		{
@@ -126,7 +128,7 @@ namespace TDA.Controllers
 			return RedirectToAction("ViewTasks");
 		}
 
-		// метод для отклонения задачи (статус - "На доработке")
+		// отклонение задачи (статус - "На доработке")
 		[HttpPost]
 		public async Task<IActionResult> RejectTaskAndRework(int taskId)
 		{
@@ -169,7 +171,6 @@ namespace TDA.Controllers
 						UserId = user.UserId,
 						Message = $"Ваш коммит по задаче '{task.Title}' не был принят, задача отправлена на доработку.",
 						CreatedAt = DateTime.Now,
-						//IsRead = false
 					};
 					db.Notifications.Add(notification);
 				}
@@ -180,6 +181,7 @@ namespace TDA.Controllers
 		}
 
 
+		//создание задачи
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> CreateTask(ActualTaskModel model)
@@ -275,6 +277,7 @@ namespace TDA.Controllers
 			return View(model);
 		}
 
+		//редактирование задачи
 		public async Task<IActionResult> EditTask(int? id)
 		{
 			if (id != null)
@@ -314,6 +317,8 @@ namespace TDA.Controllers
 			await db.SaveChangesAsync();
 			return RedirectToAction("ViewTasks");
 		}
+
+		//удаление задачи
 
 		[HttpGet]
 		[ActionName("DeleteTask")]
@@ -377,6 +382,7 @@ namespace TDA.Controllers
 
 			return RedirectToAction("ViewTasks");
 		}			
+		
 		private string connectionString ="server=localhost;database=taskdb;UserId=root;password=mysql;";
 		private List<CommitInfo> GetCommitInfosForTask(int taskId)
 		{
@@ -425,7 +431,7 @@ namespace TDA.Controllers
 			return PartialView("_CommentsPartial", comments);
 		}
 
-		// Метод для добавления комментария
+		// добавление комментария
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> AddComment(int taskId, string commentText)
@@ -506,7 +512,7 @@ namespace TDA.Controllers
 			return RedirectToAction("ViewSpecificTask", new { id = taskId });
 		}
 
-		// Метод для удаления комментария (только для админов)
+		// удаление комментария (только для админов)
 		[Authorize(Roles = "admin")]
 		[HttpPost]
 		[ValidateAntiForgeryToken]

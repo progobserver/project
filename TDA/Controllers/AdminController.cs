@@ -125,6 +125,7 @@ namespace TDA.Controllers
 
 
 		//удаление юзеров
+	
 		[Authorize(Roles = "admin")]
 		[HttpGet]
 		[ActionName("DeleteUser")]

@@ -14,11 +14,7 @@ using TDA.Models;
 
 
 namespace TDA.Controllers
-{
-	public static class HashHolder
-    {
-        public static string hash { get; set; }
-    }
+{	
 	public static class AppState
 	{
 		public static string CurrentUserName { get; set; }
@@ -30,6 +26,7 @@ namespace TDA.Controllers
         {
             db = context;
         } 
+
 		// Просмотр своего профиля
 		[HttpGet]
 		public async Task<IActionResult> UserPage()

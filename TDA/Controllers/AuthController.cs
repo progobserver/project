@@ -17,6 +17,8 @@ namespace TDA.Controllers
 			db = context;
 		}
 
+		//авторизация в системе
+
 		[HttpGet]
 		public IActionResult Login()
 		{
